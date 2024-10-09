@@ -1,0 +1,233 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #fac6c6, #f87e7e);
+}
+
+h1 {
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+#p1 {
+    font-size: 1.4em;
+    padding: 15px 0 40px;
+    text-align: center;
+}
+
+.container {
+    margin: 10px auto;
+    max-width: 660px;
+
+	background: #fff;
+    padding: 20px 0 50px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.form input {
+    font-size: 2em;
+    padding: 5px 10px;
+    width: 46%;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.form .btn {
+    font-size: 2em;
+    padding: 5px 15px;
+    margin-left: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.form-input {
+    font-size: 1.5em;
+    text-align: center;
+    font-style: oblique;
+    padding-top: 10px;
+}
+
+.btn {
+	cursor: pointer;
+    background-color: rgb(238, 238, 238);
+}
+
+.btn:hover {
+    background: lightgray;
+}
+
+.info {
+    text-align: center;
+    margin-top: 10px;
+    background: #ffd717;
+    border-radius: 5px;
+}
+
+.myList {
+    text-align: center;
+    /* display: block; */
+    margin-top: 20px;
+}
+
+.myList li {
+    font-size: 2em;
+    list-style: none;
+    padding: 5px;
+}
+
+.myList span {
+    font-size: 0.5em;
+    opacity: 0.5;
+}
+.myList span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.myList li .close {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.form-input {
+    color: red;
+    animation-name: blink;
+    /* animation: blink 1s ease-in-out 3; */
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    /* animation-direction: alternate; */
+}
+
+
+@keyframes blink {
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+}
+
+.container > * {
+    animation-name: fade-in;
+    animation-fill-mode: both;
+    animation-duration: 0.6s;
+    animation-delay: 0.8s;
+
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation-name: top-to-bottom;
+    animation-timing-function: cubic-bezier(0.66, -.3, 0, 1);
+    animation-duration: 1s;
+}
+
+@keyframes top-to-bottom {
+    0% {        
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateY(70px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+ul li {
+    animation-name: bottom-top;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+}
+
+
+
+@keyframes bottom-top {
+    0% {
+        opacity: 0.25;
+        transform: translateY(20px);
+    }
+    
+    50% {
+        opacity: 0.5;
+    }
+    
+    75% {
+        opacity: 0.75;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+.check {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    animation: fade-check 0.5s ease-in;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-check {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.myList li:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+}
